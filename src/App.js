@@ -55,7 +55,8 @@ const selectDog = (dog) => {
 const deleteDog = (dog) => {
   fetch(url + "/dog/" + dog._id, {
     method: "delete",
-    }).then(() => {
+    })
+    .then(() => {
     // don't need the response from the post but will be using the .then to update the list of dogs
     getDogs();
   });
@@ -78,14 +79,14 @@ const deleteDog = (dog) => {
             exact
             path="/create"
             render={(rp) => (
-              <Form {...rp} label="create" dog={emptyDog} handleSubmit={handleCreate} />
+              <Form {...rp} label="create" place={emptyPlace} handleSubmit={handleCreate} />
             )}
           />
           <Route
             exact
             path="/edit"
             render={(rp) => (
-              <Form {...rp} label="update" dog={selectedDog} handleSubmit={handleUpdate} />
+              <Form {...rp} label="update" place={selectedPlace} handleSubmit={handleUpdate} />
             )}
           />
         </Switch>
