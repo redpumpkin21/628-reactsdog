@@ -5,7 +5,7 @@ import Display from "./Display";
 import Form from "./Form";
 
 function App() {
-  const url = "https://dogs-api-628-cj.herokuapp.com/"
+  const url = "https://dogs-api-628-cj.herokuapp.com"
 
   const [dogs, setDogs] =useState([])
 
